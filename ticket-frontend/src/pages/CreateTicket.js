@@ -7,7 +7,7 @@ const CreateTicket = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:9090/api/tickets", {
+    await axios.post("https://backend.reactspr.kielak.com/api/tickets", {
       title,
       description,
       status: "OPEN",

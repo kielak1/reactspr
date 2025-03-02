@@ -8,7 +8,7 @@ const EditTicket = () => {
   const [ticket, setTicket] = useState({ title: "", description: "", status: "OPEN" });
 
   useEffect(() => {
-    axios.get(`http://localhost:9090/api/tickets/${id}`)
+    axios.get(`https://backend.reactspr.kielak.com/api/tickets/${id}`)
       .then(response => setTicket(response.data))
       .catch(error => console.error("Błąd pobierania zgłoszenia:", error));
   }, [id]);
@@ -19,7 +19,7 @@ const EditTicket = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:9090/api/tickets/${id}`, ticket);
+    await axios.put(`https://backend.reactspr.kielak.com/api/tickets/${id}`, ticket);
     navigate("/");
   };
 

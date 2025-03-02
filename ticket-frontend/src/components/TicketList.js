@@ -6,14 +6,14 @@ const TicketList = () => {
   const [tickets, setTickets] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:9090/api/tickets")
+    axios.get("https://backend.reactspr.kielak.com/api/tickets")
       .then(response => setTickets(response.data))
       .catch(error => console.error("Błąd pobierania danych:", error));
   }, []);
 
   const handleDelete = async (id) => {
     if (window.confirm("Czy na pewno chcesz usunąć to zgłoszenie?")) {
-      await axios.delete(`http://localhost:9090/api/tickets/${id}`);
+      await axios.delete(`https://backend.reactspr.kielak.com/api/tickets/${id}`);
       setTickets(tickets.filter(ticket => ticket.id !== id));
     }
   };
