@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Przykład strony z React</title>
+  <!-- Import bibliotek React i ReactDOM z CDN -->
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <!-- Babel do transpile'owania kodu JSX w locie -->
+  <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+  <!-- Miejsce, w którym React będzie renderował zawartość -->
+  <div id="root"></div>
+  
+  <!-- Skrypt z kodem React napisany w JSX -->
+  <script type="text/babel">
+    // Główny komponent aplikacji
+    function App() {
+      // Inicjalizacja stanu licznika
+      const [counter, podwojenie] = React.useState(1);
+      
+      // Funkcja zwiększająca licznik o 1
+      const handleIncrement = () => {
+        podwojenie(counter * -2);
+      };
+      
+      return (
+        <div style={{ textAlign: "center", marginTop: "50px" }}>
+          <h1>Witaj w React!</h1>
+          <p>Licznik: {counter}</p>
+          <button onClick={handleIncrement}>Zwiększ licznik</button>
+        </div>
+      );
+    }
+    
+    // Renderowanie komponentu App w elemencie o id="root"
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
