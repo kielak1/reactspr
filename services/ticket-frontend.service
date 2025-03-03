@@ -1,0 +1,34 @@
+[Unit]
+
+Description=Ticket Frontend Service
+
+After=network.target
+
+
+
+[Service]
+
+User=rocky
+
+WorkingDirectory=/opt/reactspr/prod/ticket-frontend
+
+ExecStart=/usr/bin/npm start
+
+Restart=always
+
+RestartSec=5s
+
+StandardOutput=journal
+
+StandardError=journal
+
+Environment=NODE_ENV=production
+
+Environment=PATH=/usr/bin:/usr/local/bin
+
+
+
+[Install]
+
+WantedBy=multi-user.target
+

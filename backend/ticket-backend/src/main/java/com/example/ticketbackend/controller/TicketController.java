@@ -14,6 +14,7 @@ import java.util.Optional;
 @RequestMapping("/api/tickets")
 @CrossOrigin(origins = "*")
 public class TicketController {
+    private static final Logger logger = LoggerFactory.getLogger(TicketController.class);
     private final TicketService ticketService;
 
     public TicketController(TicketService ticketService) {
@@ -22,7 +23,9 @@ public class TicketController {
 
     @GetMapping
     public List<Ticket> getAllTickets() {
-        return ticketService.getAllTickets();
+        List<Ticket> tickets = ticketService.getAllTickets();
+        logger.info("Pobrano zgłoszenia: {}", tickets);
+        return tickets;
     }
 
     @GetMapping("/{id}")

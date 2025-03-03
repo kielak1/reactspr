@@ -1,0 +1,2 @@
+sudo systemctl status ticket-backend ticket-frontend
+

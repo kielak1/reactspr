@@ -31,7 +31,7 @@ const TicketList = () => {
             </div>
             <div className="flex gap-2">
               <Link to={`/edit/${ticket.id}`} className="bg-yellow-500 text-white px-3 py-1 rounded">Edytuj</Link>
-              <button onClick={() => handleDelete(ticket.id)} className="bg-red-500 text-white px-3 py-1 rounded">
+              <button onClick={() => handleDelete(ticket.id)} className="bg-red-500 text-black px-3 py-1 rounded">
                 Usuń
               </button>
             </div>
