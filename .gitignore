@@ -1,0 +1,64 @@
+
+project-backup.tar.gz
+# Node.js (ticket-frontend)
+ticket-frontend/node_modules/
+ticket-frontend/npm-debug.log*
+ticket-frontend/yarn-debug.log*
+ticket-frontend/yarn-error.log*
+
+# React (ticket-frontend)
+ticket-frontend/build/
+ticket-frontend/dist/
+ticket-frontend/.env
+ticket-frontend/.env.local
+ticket-frontend/.env.development.local
+ticket-frontend/.env.test.local
+ticket-frontend/.env.production.local
+
+# Logs (ticket-frontend)
+ticket-frontend/logs/
+ticket-frontend/*.log
+ticket-frontend/npm-debug.log*
+ticket-frontend/yarn-debug.log*
+ticket-frontend/yarn-error.log*
+
+# Dependency directories (ticket-frontend)
+ticket-frontend/node_modules/
+ticket-frontend/jspm_packages/
+
+# Optional npm cache directory (ticket-frontend)
+ticket-frontend/.npm
+
+# Optional eslint cache (ticket-frontend)
+ticket-frontend/.eslintcache
+
+# Optional REACT Native cache/dir (ticket-frontend)
+ticket-frontend/.expo/
+ticket-frontend/.expo-shared/
+
+# Spring Boot (backend/ticket-backend)
+backend/ticket-backend/target/
+backend/ticket-backend/*.jar
+backend/ticket-backend/*.war
+backend/ticket-backend/*.iml
+
+# IntelliJ IDEA (backend/ticket-backend)
+backend/ticket-backend/.idea/
+backend/ticket-backend/*.iml
+backend/ticket-backend/*.iws
+backend/ticket-backend/out/
+
+# Eclipse (backend/ticket-backend)
+backend/ticket-backend/.project
+backend/ticket-backend/.classpath
+backend/ticket-backend/.settings/
+backend/ticket-backend/bin/
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
