@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ticketdb
+    username: tickeddb_user
+    password: test
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    user:
+      name: admin
+      password: admin
+server:
+  port: 9090  # Możesz ustawić dowolny port np. 9090, 8081, 5000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: mappings, health, info
+  endpoint:
+    health:
+      show-details: always
+
