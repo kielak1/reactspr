@@ -3,7 +3,6 @@ package com.example.ticketbackend.controller;
 import com.example.ticketbackend.model.Ticket;
 import com.example.ticketbackend.service.TicketService;
 import org.springframework.web.bind.annotation.*;
-import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.List;
@@ -46,5 +45,10 @@ public class TicketController {
     @DeleteMapping("/{id}")
     public void deleteTicket(@PathVariable Long id) {
         ticketService.deleteTicket(id);
+    }
+
+    @GetMapping("/copyright")
+    public String getCopyrightText() {
+        return "© 2025 Tadeusz Kielak. Aplikacja testowa React + Spring Boot.";
     }
 }
