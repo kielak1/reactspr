@@ -1,6 +1,6 @@
 
-project-archive.tar.gz
-project-archive.tar
+project_archive.tar.gz
+project_archive.tar
 # Node.js (ticket-frontend)
 ticket-frontend/node_modules/
 ticket-frontend/npm-debug.log*
